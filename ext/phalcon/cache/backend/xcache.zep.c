@@ -91,7 +91,7 @@ PHP_METHOD(Phalcon_Cache_Backend_Xcache, __construct) {
 		ZVAL_STRING(_0$$4, "", 1);
 		zephir_array_update_string(&options, SL("statsKey"), &_0$$4, PH_COPY | PH_SEPARATE);
 	}
-	ZEPHIR_CALL_PARENT(NULL, phalcon_cache_backend_xcache_ce, getThis(), "__construct", &_1, 122, frontend, options);
+	ZEPHIR_CALL_PARENT(NULL, phalcon_cache_backend_xcache_ce, getThis(), "__construct", &_1, 118, frontend, options);
 	zephir_check_call_status();
 	ZEPHIR_MM_RESTORE();
 
@@ -403,7 +403,7 @@ PHP_METHOD(Phalcon_Cache_Backend_Xcache, exists) {
 		ZEPHIR_CONCAT_SVV(lastKey, "_PHCX", _0$$4, keyName);
 	}
 	if (zephir_is_true(lastKey)) {
-		ZEPHIR_RETURN_CALL_FUNCTION("xcache_isset", NULL, 128, lastKey);
+		ZEPHIR_RETURN_CALL_FUNCTION("xcache_isset", NULL, 124, lastKey);
 		zephir_check_call_status();
 		RETURN_MM();
 	}
@@ -446,7 +446,7 @@ PHP_METHOD(Phalcon_Cache_Backend_Xcache, increment) {
 	if ((zephir_function_exists_ex(SS("xcache_inc") TSRMLS_CC) == SUCCESS)) {
 		ZEPHIR_SINIT_VAR(_1$$6);
 		ZVAL_LONG(&_1$$6, value);
-		ZEPHIR_CALL_FUNCTION(&newVal, "xcache_inc", NULL, 129, lastKey, &_1$$6);
+		ZEPHIR_CALL_FUNCTION(&newVal, "xcache_inc", NULL, 125, lastKey, &_1$$6);
 		zephir_check_call_status();
 	} else {
 		ZEPHIR_CALL_FUNCTION(&origVal, "xcache_get", NULL, 92, lastKey);
@@ -495,7 +495,7 @@ PHP_METHOD(Phalcon_Cache_Backend_Xcache, decrement) {
 	if ((zephir_function_exists_ex(SS("xcache_dec") TSRMLS_CC) == SUCCESS)) {
 		ZEPHIR_SINIT_VAR(_1$$6);
 		ZVAL_LONG(&_1$$6, value);
-		ZEPHIR_CALL_FUNCTION(&newVal, "xcache_dec", NULL, 130, lastKey, &_1$$6);
+		ZEPHIR_CALL_FUNCTION(&newVal, "xcache_dec", NULL, 126, lastKey, &_1$$6);
 		zephir_check_call_status();
 	} else {
 		ZEPHIR_CALL_FUNCTION(&origVal, "xcache_get", NULL, 92, lastKey);
@@ -546,7 +546,7 @@ PHP_METHOD(Phalcon_Cache_Backend_Xcache, flush) {
 			ZEPHIR_GET_HMKEY(key, _3$$5, _2$$5);
 			ZEPHIR_GET_HVALUE(_1$$5, _4$$5);
 			zephir_array_unset(&keys, key, PH_SEPARATE);
-			ZEPHIR_CALL_FUNCTION(NULL, "xcache_unset", &_5, 131, key);
+			ZEPHIR_CALL_FUNCTION(NULL, "xcache_unset", &_5, 127, key);
 			zephir_check_call_status();
 		}
 		zend_hash_destroy(_3$$5);

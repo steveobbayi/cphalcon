@@ -2011,7 +2011,7 @@ PHP_METHOD(Phalcon_Db_Adapter, describeIndexes) {
 		ZEPHIR_GET_HVALUE(indexColumns, _10);
 		ZEPHIR_INIT_NVAR(_11$$6);
 		object_init_ex(_11$$6, phalcon_db_index_ce);
-		ZEPHIR_CALL_METHOD(NULL, _11$$6, "__construct", &_12, 23, name, indexColumns);
+		ZEPHIR_CALL_METHOD(NULL, _11$$6, "__construct", &_12, 24, name, indexColumns);
 		zephir_check_call_status();
 		zephir_array_update_zval(&indexObjects, name, &_11$$6, PH_COPY | PH_SEPARATE);
 	}
@@ -2144,7 +2144,7 @@ PHP_METHOD(Phalcon_Db_Adapter, describeReferences) {
 		ZEPHIR_OBS_NVAR(_19$$6);
 		zephir_array_fetch_string(&_19$$6, arrayReference, SL("referencedColumns"), PH_NOISY, "phalcon/db/adapter.zep", 985 TSRMLS_CC);
 		zephir_array_update_string(&_18$$6, SL("referencedColumns"), &_19$$6, PH_COPY | PH_SEPARATE);
-		ZEPHIR_CALL_METHOD(NULL, _17$$6, "__construct", &_20, 24, name, _18$$6);
+		ZEPHIR_CALL_METHOD(NULL, _17$$6, "__construct", &_20, 25, name, _18$$6);
 		zephir_check_call_status();
 		zephir_array_update_zval(&referenceObjects, name, &_17$$6, PH_COPY | PH_SEPARATE);
 	}
@@ -2420,7 +2420,7 @@ PHP_METHOD(Phalcon_Db_Adapter, getDefaultIdValue) {
 	object_init_ex(return_value, phalcon_db_rawvalue_ce);
 	ZEPHIR_INIT_VAR(_0);
 	ZVAL_STRING(_0, "null", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 25, _0);
+	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 26, _0);
 	zephir_check_temp_parameter(_0);
 	zephir_check_call_status();
 	RETURN_MM();
@@ -2455,7 +2455,7 @@ PHP_METHOD(Phalcon_Db_Adapter, getDefaultValue) {
 	object_init_ex(return_value, phalcon_db_rawvalue_ce);
 	ZEPHIR_INIT_VAR(_0);
 	ZVAL_STRING(_0, "DEFAULT", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 25, _0);
+	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 26, _0);
 	zephir_check_temp_parameter(_0);
 	zephir_check_call_status();
 	RETURN_MM();

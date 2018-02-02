@@ -549,7 +549,7 @@ PHP_METHOD(Phalcon_Dispatcher, setModelBinding) {
 	if (value) {
 		ZEPHIR_INIT_VAR(_1$$4);
 		object_init_ex(_1$$4, phalcon_mvc_model_binder_ce);
-		ZEPHIR_CALL_METHOD(NULL, _1$$4, "__construct", NULL, 72, cache);
+		ZEPHIR_CALL_METHOD(NULL, _1$$4, "__construct", NULL, 74, cache);
 		zephir_check_call_status();
 		zephir_update_property_this(getThis(), SL("_modelBinder"), _1$$4 TSRMLS_CC);
 	}

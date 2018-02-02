@@ -178,7 +178,7 @@ PHP_METHOD(Phalcon_Di, set) {
 	} else {
 		ZVAL_BOOL(_0, 0);
 	}
-	ZEPHIR_CALL_METHOD(NULL, service, "__construct", NULL, 68, name, definition, _0);
+	ZEPHIR_CALL_METHOD(NULL, service, "__construct", NULL, 70, name, definition, _0);
 	zephir_check_call_status();
 	zephir_update_property_array(this_ptr, SL("_services"), name, service TSRMLS_CC);
 	RETURN_CCTOR(service);
@@ -291,7 +291,7 @@ PHP_METHOD(Phalcon_Di, attempt) {
 		} else {
 			ZVAL_BOOL(_1$$3, 0);
 		}
-		ZEPHIR_CALL_METHOD(NULL, service, "__construct", NULL, 68, name, definition, _1$$3);
+		ZEPHIR_CALL_METHOD(NULL, service, "__construct", NULL, 70, name, definition, _1$$3);
 		zephir_check_call_status();
 		zephir_update_property_array(this_ptr, SL("_services"), name, service TSRMLS_CC);
 		RETURN_CCTOR(service);
@@ -775,7 +775,7 @@ PHP_METHOD(Phalcon_Di, __call) {
 		ZVAL_LONG(&_0$$3, 3);
 		ZEPHIR_INIT_VAR(_1$$3);
 		zephir_substr(_1$$3, method, 3 , 0, ZEPHIR_SUBSTR_NO_LENGTH);
-		ZEPHIR_CALL_FUNCTION(&possibleService, "lcfirst", NULL, 69, _1$$3);
+		ZEPHIR_CALL_FUNCTION(&possibleService, "lcfirst", NULL, 71, _1$$3);
 		zephir_check_call_status();
 		if (zephir_array_isset(services, possibleService)) {
 			if (zephir_fast_count_int(arguments TSRMLS_CC)) {
@@ -795,7 +795,7 @@ PHP_METHOD(Phalcon_Di, __call) {
 			ZVAL_LONG(&_2$$8, 3);
 			ZEPHIR_INIT_VAR(_3$$8);
 			zephir_substr(_3$$8, method, 3 , 0, ZEPHIR_SUBSTR_NO_LENGTH);
-			ZEPHIR_CALL_FUNCTION(&_4$$8, "lcfirst", NULL, 69, _3$$8);
+			ZEPHIR_CALL_FUNCTION(&_4$$8, "lcfirst", NULL, 71, _3$$8);
 			zephir_check_call_status();
 			ZEPHIR_CALL_METHOD(NULL, this_ptr, "set", NULL, 0, _4$$8, definition);
 			zephir_check_call_status();
@@ -950,7 +950,7 @@ PHP_METHOD(Phalcon_Di, loadFromYaml) {
 
 	ZEPHIR_INIT_VAR(services);
 	object_init_ex(services, phalcon_config_adapter_yaml_ce);
-	ZEPHIR_CALL_METHOD(NULL, services, "__construct", NULL, 70, filePath, callbacks);
+	ZEPHIR_CALL_METHOD(NULL, services, "__construct", NULL, 72, filePath, callbacks);
 	zephir_check_call_status();
 	ZEPHIR_CALL_METHOD(NULL, this_ptr, "loadfromconfig", NULL, 0, services);
 	zephir_check_call_status();
@@ -1013,7 +1013,7 @@ PHP_METHOD(Phalcon_Di, loadFromPhp) {
 
 	ZEPHIR_INIT_VAR(services);
 	object_init_ex(services, phalcon_config_adapter_php_ce);
-	ZEPHIR_CALL_METHOD(NULL, services, "__construct", NULL, 71, filePath);
+	ZEPHIR_CALL_METHOD(NULL, services, "__construct", NULL, 73, filePath);
 	zephir_check_call_status();
 	ZEPHIR_CALL_METHOD(NULL, this_ptr, "loadfromconfig", NULL, 0, services);
 	zephir_check_call_status();
